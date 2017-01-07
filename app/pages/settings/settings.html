@@ -1,0 +1,23 @@
+<ion-navbar *navbar>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>settings</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="getting-started">
+    <ion-list>
+
+        <ion-item>
+            <ion-label fixed>t411 url</ion-label>
+            <ion-input type="text" [(ngModel)]="ctrl.settings.t411_url"></ion-input>
+        </ion-item>
+        <ion-item *ngif="settings.token">
+            <ion-label fixed>t411 token</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>
